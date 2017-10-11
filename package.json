@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "nem-petit-ico",
+  "description": "For personal or small ICO project use.",
+  "license": "MIT",
+  "author": "44uk",
+  "version": "0.0.1",
+  "engines": {
+    "node": "8.1.4"
+  },
+  "homepage": "https://github.com/44uk/nem-petit-ico",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/44uk/nem-petit-ico.git"
+  },
+  "scripts": {
+    "tokensale": "node lib/tokensale.js",
+    "status": "node lib/status.js"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "fs-extra": "^4.0.2",
+    "lodash": "^4.17.4",
+    "log4js": "^2.3.4",
+    "nem-sdk": "^1.5.1"
+  }
+}

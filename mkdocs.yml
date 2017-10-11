@@ -1,0 +1,10 @@
+site_url: https://44uk.github.io/nem-petit-ico/
+site_name: nem Petit ICO
+site_description: For personal or small ICO project use.
+repo_url: https://github.com/44uk/nem-petit-ico
+copyright: Copyright &copy; 2017, <a href="https://github.com/44uk">Yoshiyuki Ieyama</a>, <a href="https://twitter.com/44uk_i3">44uk_i3</a>.
+theme: readthedocs
+pages:
+  - Home: index.md
+  - Usage: usage.md
+  - About: about.md
