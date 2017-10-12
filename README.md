@@ -8,6 +8,8 @@ For personal or small ICO project use.
 
 *Haven't finished testing on MAINNET yet.*
 
+[日本語READMEはこちら](README.ja.md)
+
 ## Requirement
 
 * Node.js 6.11.4 or greater
