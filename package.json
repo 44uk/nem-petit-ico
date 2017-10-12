@@ -14,8 +14,8 @@
     "url": "https://github.com/44uk/nem-petit-ico.git"
   },
   "scripts": {
-    "tokensale": "node lib/tokensale.js",
-    "status": "node lib/status.js"
+    "tokensale": "node -r dotenv/config lib/tokensale.js dotenv_config_path=config/env",
+    "status": "node -r dotenv/config lib/status.js dotenv_config_path=config/env"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
