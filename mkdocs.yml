@@ -6,5 +6,6 @@ copyright: Copyright &copy; 2017, <a href="https://github.com/44uk">Yoshiyuki Ie
 theme: readthedocs
 pages:
   - Home: index.md
+  - Windows: windows.md
   - Usage: usage.md
   - About: about.md
