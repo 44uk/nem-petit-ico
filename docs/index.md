@@ -2,9 +2,9 @@
 
 [![Join the chat at https://gitter.im/44uk/nem-petit-ico](https://badges.gitter.im/44uk/nem-petit-ico.svg)](https://gitter.im/44uk/nem-petit-ico?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-For personal or small ICO use.
+For personal or small ICO project use.
 
-*Not supported MAINNET now. Do not use on MAINNET.*
+*Haven't finished testing on MAINNET yet.*
 
 [Feel free to send me your feedback!](/about#feedback-and-contact)
 
