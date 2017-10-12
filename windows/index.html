@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Windows - nem Petit ICO</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Windows";
+    var mkdocs_page_input_path = "windows.md";
+    var mkdocs_page_url = "/windows/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> nem Petit ICO</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Windows</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">環境構築</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">初期設定</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_3">ライブラリのインストール</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">設定ファイルの設置</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#_5">実行</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../usage/">Usage</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">nem Petit ICO</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Windows</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/44uk/nem-petit-ico/edit/master/docs/windows.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="_1">環境構築</h2>
+<p>動作には<code>Node.js</code>が必要です。インストーラをダウンロードします。</p>
+<ul>
+<li><a href="https://nodejs.org/ja/">Node.js</a></li>
+</ul>
+<p><img alt="" src="../img/win_1.png" /></p>
+<p>最新版で問題ないですが、動作しない場合は安定版をインストールしてお試しください。</p>
+<p><img alt="" src="../img/win_2.png" /></p>
+<p>ダウンロードしたらアイコンをダブルクリックしてインストーラを立ち上げます。</p>
+<p><img alt="" src="../img/win_3.png" /></p>
+<p>インストーラの準備ができ「Next」が有効になったらクリックします。</p>
+<p><img alt="" src="../img/win_4.png" /></p>
+<p>「ライセンスに同意する」にチェックを入れて、「Next」が有効になったらクリックします。</p>
+<p><img alt="" src="../img/win_5.png" /></p>
+<p>変更せずに「Next」をクリックします。</p>
+<p><img alt="" src="../img/win_6.png" /></p>
+<p>変更せずに「Next」をクリックします。</p>
+<p><img alt="" src="../img/win_7.png" /></p>
+<p>「Install」をクリックします。</p>
+<p><img alt="" src="../img/win_8.png" /></p>
+<p>しばらく待ち、この画面が表示されればインストール完了です。</p>
+<p>「Finish」をクリックして終了します。</p>
+<p>インストールが完了したら、ここで再起動してください。</p>
+<p><img alt="" src="../img/win_9.png" /></p>
+<p>デスクトップなどでよいので、<code>Shiftキー</code>を押しながら右クリックをしてください。</p>
+<p><code>コマンドウィンドウをここで開く(W)</code>という項目が表示されるので、これをクリックしてください。</p>
+<p><img alt="" src="../img/win_10.png" /></p>
+<p>表示されたウィンドウで<code>node -v</code>と入力して<code>Enter</code>キーで確定するとバージョンが表示されます。</p>
+<p>これで環境構築は完了です。</p>
+<h2 id="_2">初期設定</h2>
+<h3 id="_3">ライブラリのインストール</h3>
+<p>nem Petit ICOに必要なライブラリのダウンロードを行います。</p>
+<p><code>_setup.bat</code>をダブルクリックしてください。</p>
+<p>ウィンドウに<code>続行するには何かキーを押してください . . .</code>と表示されたら完了です。</p>
+<p>何かキーを押すか、ウィンドウを閉じてください。</p>
+<h3 id="_4">設定ファイルの設置</h3>
+<p><code>.env.sample</code></p>
+<h2 id="_5">実行</h2>
+<p><code>_tokensale.bat</code>
+<code>_status.bat</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../usage/" class="btn btn-neutral float-right" title="Usage">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2017, <a href="https://github.com/44uk">Yoshiyuki Ieyama</a>, <a href="https://twitter.com/44uk_i3">44uk_i3</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/44uk/nem-petit-ico" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../usage/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
