@@ -168,39 +168,8 @@
 <p>ウィンドウに<code>続行するには何かキーを押してください . . .</code>と表示されたら完了です。</p>
 <p>何かキーを押すか、ウィンドウを閉じてください。</p>
 <h3 id="_4">設定ファイルの設置</h3>
-<p><code>config/env.sample</code>をコピーして<code>config/env</code>として配置してください。</p>
-<p><code>config/env</code>をテキストエディタで開き、内容を適宜編集してください。</p>
-<pre><code># testnet/mainnet ネットワークを指定します。
-NEM_NETWORK=testnet
-
-# 接続するノードを指定します。(空白の場合はnem-sdkのデフォルトが利用されます)
-# (e.g. http://62.75.171.41)
-NEM_NODE=
-
-# 接続するノードのポートを指定します。(default: 7890)
-NEM_PORT=
-
-# 0を設定することで実際の送金が行われます。
-TOKENSALE_DRYRUN=1
-
-# xem受信アドレスを指定します。(空白の場合は秘密鍵のアドレスが利用されます)
-TOKENSALE_SINK=__PUT_XEM_RECEIVE_ADDRESS__
-
-# 最低xem量を指定します。(1000000 = 1xem)
-TOKENSALE_MIN_XEM=1000000
-
-# 送信するモザイクを指定します。(e.g. nem:xem)
-TOKENSALE_MOSAIC_FQN=__PUT_MOSAIC_FULL_NAME__
-
-# モザイクを保有する秘密鍵を指定します。
-TOKENSALE_PKEY=__PUT_PRIVATE_KEY_MOSAIC_OWNED__
-
-# 対象とするトランザクションの期間を指定します。
-# ISO8601形式で指定してください。
-TOKENSALE_MIN_TIME=2017-10-12T00:00:00+0900
-TOKENSALE_MAX_TIME=2017-10-12T23:59:59+0900
-</code></pre>
-
+<p><a href="../usage#setting">Usage - nem Petit ICO</a></p>
+<p>こちらを参照してください。</p>
 <h2 id="_5">実行</h2>
 <h3 id="_6">トークンセール</h3>
 <p>モザイクの交換を実行します。</p>
