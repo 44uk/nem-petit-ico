@@ -1,3 +1,4 @@
 config/env
 site/
 log/*.log
+build/*
