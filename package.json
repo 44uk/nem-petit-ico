@@ -23,5 +23,9 @@
     "lodash": "^4.17.4",
     "log4js": "^2.3.4",
     "nem-sdk": "^1.5.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
   }
 }
