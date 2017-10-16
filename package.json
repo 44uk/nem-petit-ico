@@ -14,6 +14,7 @@
     "url": "https://github.com/44uk/nem-petit-ico.git"
   },
   "scripts": {
+    "test": "mocha --recursive",
     "tokensale": "node -r dotenv/config lib/tokensale.js dotenv_config_path=config/env",
     "status": "node -r dotenv/config lib/status.js dotenv_config_path=config/env"
   },
