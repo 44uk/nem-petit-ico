@@ -18,20 +18,12 @@ describe('Applicant', () => {
       .reply(200, { data: [
         {
           meta: {
-            innerHash: {},
-            id: 135806,
             hash: { data: "79e56ebcc7bf067aaeeba71e6563d7309cece6664b7b7f046712668aefa05439" },
-            height: 1160571
           },
           transaction: {
-            timeStamp: 86400 - 386 - 1,
+            timeStamp: 86400 - 386 + 1,
             amount: 1000000,
-            signature: "f913fb6f7dbb263e6720cc791887d2a3a5fa0b81f31239cecfa0cc677205e41eb698b601915bc7cc0a6bbb3d9099b5e862f276681a859a12a70313a815f02609",
-            fee: 50000,
-            recipient: "TBX7B37ZRLNISNIY7ZMLS7DWSMHW2T5733LOUP5P",
             type: 257,
-            deadline: 3600,
-            message: {},
             version: -1744830463,
             signer: "08d5d8f415dd5facbc45ede9e5c97ab514c3d999ebe5d387552fdbf360cd21be"
           }
@@ -50,12 +42,21 @@ describe('Applicant', () => {
         },
         {
           meta: {
+            innerHash: {},
+            id: 135806,
+            id: 999999,
             hash: { data: "79e56ebcc7bf067aaeeba71e6563d7309cece6664b7b7f046712668aefa05439" },
+            height: 1160571
           },
           transaction: {
-            timeStamp: 86400 - 386 + 1,
+            timeStamp: 0,
             amount: 1000000,
+            signature: "f913fb6f7dbb263e6720cc791887d2a3a5fa0b81f31239cecfa0cc677205e41eb698b601915bc7cc0a6bbb3d9099b5e862f276681a859a12a70313a815f02609",
+            fee: 50000,
+            recipient: "TBX7B37ZRLNISNIY7ZMLS7DWSMHW2T5733LOUP5P",
             type: 257,
+            deadline: 3600,
+            message: {},
             version: -1744830463,
             signer: "08d5d8f415dd5facbc45ede9e5c97ab514c3d999ebe5d387552fdbf360cd21be"
           }
@@ -66,8 +67,8 @@ describe('Applicant', () => {
     it('return a tx, summary received 2 xem', () => {
       return described.fetchXemReceives(
         addr,
-        Date.parse('2015-03-29T00:06:25'),
-        Date.parse('2015-03-29T23:59:59')
+        Date.parse('2015-03-29T00:06:25Z'),
+        Date.parse('2015-03-29T23:59:59Z')
       ).then(results => {
         expect(results).to.be.an('array');
         expect(results).to.have.lengthOf(1);
@@ -93,7 +94,7 @@ describe('Applicant', () => {
             height: 1161152
           },
           transaction: {
-            timeStamp: 86400 - 386 + 1,
+            timeStamp: 0,
             amount: 1000000,
             signature: "5d55988c3320b85e2ac3e78cc878c1936ab9bab39298cac3536c0126b7bc5cd0b07a647aff9cdf1e48f9acf576638331a178798f42c1ade21d561fe7deb13b0f",
             fee: 50000,
@@ -134,7 +135,7 @@ describe('Applicant', () => {
     it('return a tx, sent a mosaic', () => {
       return described.fetchMosaicSents(
         addr,
-        Date.parse('2015-03-29T00:06:25'),
+        Date.parse('2015-03-29T00:06:25Z'),
         mosaicFqn
       ).then(results => {
         expect(results).to.be.an('array');
@@ -162,7 +163,7 @@ describe('Applicant', () => {
               height: 1161152
             },
             transaction: {
-              timeStamp: 86400 - 386 + 1,
+              timeStamp: 0,
               amount: 1000000,
               signature: "5d55988c3320b85e2ac3e78cc878c1936ab9bab39298cac3536c0126b7bc5cd0b07a647aff9cdf1e48f9acf576638331a178798f42c1ade21d561fe7deb13b0f",
               fee: 50000,
@@ -184,7 +185,7 @@ describe('Applicant', () => {
     it('return a tx, sent a mosaic', () => {
       return described.fetchMosaicSendings(
         addr,
-        Date.parse('2015-03-29T00:06:25'),
+        Date.parse('2015-03-29T00:06:25Z'),
         mosaicFqn
       ).then(results => {
         expect(results).to.be.an('array');
