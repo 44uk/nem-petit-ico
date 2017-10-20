@@ -14,14 +14,21 @@
     "url": "https://github.com/44uk/nem-petit-ico.git"
   },
   "scripts": {
-    "tokensale": "node -r dotenv/config lib/tokensale.js dotenv_config_path=config/env",
-    "status": "node -r dotenv/config lib/status.js dotenv_config_path=config/env"
+    "applicants": "node -r dotenv/config bin/applicants.js dotenv_config_path=config/env",
+    "sendmosaic": "node -r dotenv/config bin/sendmosaic.js dotenv_config_path=config/env",
+    "test": "mocha --recursive"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
     "fs-extra": "^4.0.2",
     "lodash": "^4.17.4",
-    "log4js": "^2.3.4",
+    "log4js": "^2.3.7",
     "nem-sdk": "^1.5.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nock": "^9.0.22",
+    "timekeeper": "^2.0.0"
   }
 }
