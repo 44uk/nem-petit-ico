@@ -75,11 +75,14 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#_6">トークンセール</a></li>
+            <li><a class="toctree-l3" href="#_6">参加アドレスの集計</a></li>
         
             <li><a class="toctree-l3" href="#_7">受領確認</a></li>
         
         </ul>
+    
+
+    <li class="toctree-l2"><a href="#_8">モザイクの配布</a></li>
     
 
     </ul>
@@ -171,13 +174,17 @@
 <p><a href="../usage#setting">Usage - nem Petit ICO</a></p>
 <p>こちらを参照してください。</p>
 <h2 id="_5">実行</h2>
-<h3 id="_6">トークンセール</h3>
-<p>モザイクの交換を実行します。</p>
-<p><img alt="_tokensale.bat" src="../img/tk_1.png" /></p>
-<p><code>_tokensale.bat</code>をダブルクリックしてください。</p>
+<h3 id="_6">参加アドレスの集計</h3>
+<p><code>MOSAICSALE_SINK</code>アドレスに送られた<code>xem</code>を集計します。</p>
+<p>集計した結果は<code>tmp/applicants.json</code>として一時保存されます。</p>
+<p><img alt="_mosaicsale.bat" src="../img/mo_1.png" /></p>
+<p><code>_mosaicsale.bat</code>をダブルクリックしてください。</p>
 <h3 id="_7">受領確認</h3>
-<p>受信アドレスに届いたxemの集計を表示します。</p>
+<p>集計結果<code>tmp/applicants.json</code>の内容を</p>
 <p><code>_status.bat</code>をダブルクリックしてください。</p>
+<h2 id="_8">モザイクの配布</h2>
+<p>集計結果<code>tmp/applicants.json</code>の内容である<code>candidates</code>のアドレスへ割り当てられたモザイク数を送信します。</p>
+<p><code>_sendmosaic.bat</code>をダブルクリックしてください。</p>
               
             </div>
           </div>
