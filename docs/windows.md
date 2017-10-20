@@ -76,17 +76,25 @@ nem Petit ICOの動作に必要なライブラリのダウンロードを行い�
 
 ## 実行
 
-### トークンセール
+### 参加アドレスの集計
 
-モザイクの交換を実行します。
+`MOSAICSALE_SINK`アドレスに送られた`xem`を集計します。
 
-![_tokensale.bat](img/tk_1.png)
+集計した結果は`tmp/applicants.json`として一時保存されます。
 
-`_tokensale.bat`をダブルクリックしてください。
+![_mosaicsale.bat](img/mo_1.png)
+
+`_mosaicsale.bat`をダブルクリックしてください。
 
 ### 受領確認
 
-受信アドレスに届いたxemの集計を表示します。
+集計結果`tmp/applicants.json`の内容を
 
 `_status.bat`をダブルクリックしてください。
+
+## モザイクの配布
+
+集計結果`tmp/applicants.json`の内容である`candidates`のアドレスへ割り当てられたモザイク数を送信します。
+
+`_sendmosaic.bat`をダブルクリックしてください。
 
