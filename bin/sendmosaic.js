@@ -6,6 +6,7 @@ const logger = helper.logger('bin/sendmosaics');
 
 const DRYRUN = process.env.MOSAICSALE_DRYRUN || 1;
 const PKEY = process.env.MOSAICSALE_PKEY;
+const SENDER = helper.privkey2addr(PKEY);
 const MOSAIC_FQN = process.env.MOSAICSALE_MOSAIC_FQN;
 
 const MIN_TIME = Date.parse(process.env.MOSAICSALE_MIN_TIME);
@@ -17,6 +18,7 @@ const MESSAGE = process.env.MOSAICSALE_MESSAGE || '';
 
 logger.info('# Settings');
 logger.info(`DRYRUN = ${DRYRUN}`);
+logger.info(`SENDER = ${SENDER}`);
 logger.info(`MOSAIC_FQN = ${MOSAIC_FQN}`);
 logger.info(`MIN_TIME = ${process.env.MOSAICSALE_MIN_TIME}`);
 logger.info(`MAX_TIME = ${process.env.MOSAICSALE_MAX_TIME}`);
@@ -30,6 +32,12 @@ function loadCandidates() {
   ;
 }
 
+function selectCandidates(applicants, sents) {
+  return applicants.filter(a => {
+    return !sents.find(el => el.address === a.address);
+  })
+}
+
 function main() {
   let now = new Date().getTime();
   if(now < MIN_TIME) {
@@ -38,8 +46,14 @@ function main() {
   }
   logger.info('# start sending');
 
-  loadCandidates()
-  .then(candidates => {
+  Promise.all([
+    loadCandidates(),
+    applicant.fetchMosaicSentAll(SENDER, MIN_TIME, MOSAIC_FQN)
+  ]).then(data => {
+    let candidates = data[0];
+    let sents = data[1];
+    candidates = selectCandidates(candidates, sents);
+
     if(DRYRUN != 0) {
       logger.info(candidates);
       console.log(candidates);
@@ -52,6 +66,7 @@ function main() {
   })
   .then(applicant.sendMosaics(MOSAIC_FQN, MESSAGE, PKEY))
   .then(res=> {
+    logger.info(res);
     console.log(res);
   })
   .catch(err => {
