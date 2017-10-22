@@ -156,12 +156,7 @@ describe('Applicant', () => {
       .reply(200, {
         data: [
           {
-            meta: {
-              innerHash: {},
-              id: 135820,
-              hash: { data: "17b7a1efcb4c89dfaa77ac689e56e6d7bca7532675bf1369c90211222db960ed" },
-              height: 1161152
-            },
+            meta: { data: null },
             transaction: {
               timeStamp: 0,
               amount: 1000000,
