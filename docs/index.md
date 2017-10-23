@@ -17,5 +17,3 @@ For personal or small ICO project use.
 ```bash
 $ npm install
 ```
-
-Windowsの場合は`_setup.bat`をダブルクリックしても実行できます。
