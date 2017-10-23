@@ -127,7 +127,7 @@ NEM_NODE=
 # 接続するノードのポートを指定します。(default: 7890)
 NEM_PORT=
 
-# 0を設定することで実際の送金が行われます。
+# 0を設定することで実際の送金が行われます。(安全装置としてのフラグです)
 MOSAICSALE_DRYRUN=1
 
 # 対象とするトランザクションの期間を指定します。
@@ -138,7 +138,7 @@ MOSAICSALE_MAX_TIME=2017-10-12T23:59:59+0900
 # xem受信アドレスを指定します。(空白の場合は秘密鍵のアドレスが利用されます)
 MOSAICSALE_SINK=__PUT_XEM_RECEIVE_ADDRESS__
 
-# モザイクを保有する秘密鍵を指定します。
+# 配布するモザイクをを保有する秘密鍵を指定します。
 MOSAICSALE_PKEY=__PUT_PRIVATE_KEY_MOSAIC_OWNED__
 
 # 送信するモザイクを指定します。(e.g. nem:xem)
@@ -156,9 +156,21 @@ MOSAICSALE_MESSAGE=
 <pre><code class="bash">npm run applicants
 </code></pre>
 
+<p>アドレスごとに受け取ったxemの集計を行い、モザイク送信用の中間ファイルを生成します。</p>
+<p>中間ファイルは<code>tmp/applicants.json</code>として保存されます。</p>
+<ul>
+<li><code>candidates</code>: モザイクを送信するアドレス</li>
+<li><code>receives</code>: xemを受け取ったアドレス</li>
+<li><code>sents</code>: モザイクを送信したアドレス</li>
+</ul>
+<p>それぞれの情報がまとめられています。</p>
+<p>これは<code>mosaicsend</code>コマンドに使用されます。</p>
 <h2 id="send-mosaic-to-candidates">Send Mosaic to candidates</h2>
 <pre><code class="bash">npm run sendmosaic
 </code></pre>
+
+<p><code>tmp/applicants.json</code>の<code>"candidates"</code>に記されたアドレスに割り当てられたモザイクを送信します。</p>
+<p>送信時にも未承認、承認済みトランザクションの確認も行うため二重に実行しても重複してモザイクを送信しません。</p>
               
             </div>
           </div>

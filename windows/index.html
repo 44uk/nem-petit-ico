@@ -77,12 +77,10 @@
         
             <li><a class="toctree-l3" href="#_6">参加アドレスの集計</a></li>
         
-            <li><a class="toctree-l3" href="#_7">受領確認</a></li>
-        
         </ul>
     
 
-    <li class="toctree-l2"><a href="#_8">モザイクの配布</a></li>
+    <li class="toctree-l2"><a href="#_7">モザイクの配布</a></li>
     
 
     </ul>
@@ -171,20 +169,62 @@
 <p>ウィンドウに<code>続行するには何かキーを押してください . . .</code>と表示されたら完了です。</p>
 <p>何かキーを押すか、ウィンドウを閉じてください。</p>
 <h3 id="_4">設定ファイルの設置</h3>
-<p><a href="../usage#setting">Usage - nem Petit ICO</a></p>
-<p>こちらを参照してください。</p>
+<p><code>config/env.sample</code>をコピーして<code>config/env</code>として配置してください。</p>
+<p><code>config/env</code>をテキストエディタで開き、内容を適宜編集してください。</p>
+<pre><code># testnet/mainnet ネットワークを指定します。
+NEM_NETWORK=testnet
+
+# 接続するノードを指定します。(空白の場合はnem-sdkのデフォルトが利用されます)
+# (e.g. http://62.75.171.41)
+NEM_NODE=
+
+# 接続するノードのポートを指定します。(default: 7890)
+NEM_PORT=
+
+# 0を設定することで実際の送金が行われます。(安全装置としてのフラグです)
+MOSAICSALE_DRYRUN=1
+
+# 対象とするトランザクションの期間を指定します。
+# ISO8601形式で指定してください。
+MOSAICSALE_MIN_TIME=2017-10-12T00:00:00+0900
+MOSAICSALE_MAX_TIME=2017-10-12T23:59:59+0900
+
+# xem受信アドレスを指定します。(空白の場合は秘密鍵のアドレスが利用されます)
+MOSAICSALE_SINK=__PUT_XEM_RECEIVE_ADDRESS__
+
+# 配布するモザイクをを保有する秘密鍵を指定します。
+MOSAICSALE_PKEY=__PUT_PRIVATE_KEY_MOSAIC_OWNED__
+
+# 送信するモザイクを指定します。(e.g. nem:xem)
+MOSAICSALE_MOSAIC_FQN=__PUT_MOSAIC_FULL_NAME__
+
+# 最低必要xem量を指定します。(1000000 = 1xem)
+MOSAICSALE_MIN_XEM=1000000
+
+# モザイク送信時のメッセージを指定します。
+MOSAICSALE_MESSAGE=
+</code></pre>
+
+<p>xem受取アドレスとは別のアカウント秘密鍵を設定することもできます。</p>
 <h2 id="_5">実行</h2>
 <h3 id="_6">参加アドレスの集計</h3>
 <p><code>MOSAICSALE_SINK</code>アドレスに送られた<code>xem</code>を集計します。</p>
-<p>集計した結果は<code>tmp/applicants.json</code>として一時保存されます。</p>
 <p><img alt="_mosaicsale.bat" src="../img/mo_1.png" /></p>
 <p><code>_mosaicsale.bat</code>をダブルクリックしてください。</p>
-<h3 id="_7">受領確認</h3>
-<p>集計結果<code>tmp/applicants.json</code>の内容を</p>
-<p><code>_status.bat</code>をダブルクリックしてください。</p>
-<h2 id="_8">モザイクの配布</h2>
+<p>アドレスごとに受け取ったxemの集計を行い、モザイク送信用の中間ファイルを生成します。</p>
+<p>中間ファイルは<code>tmp/applicants.json</code>として保存されます。</p>
+<ul>
+<li><code>candidates</code>: モザイクを送信するアドレス</li>
+<li><code>receives</code>: xemを受け取ったアドレス</li>
+<li><code>sents</code>: モザイクを送信したアドレス</li>
+</ul>
+<p>それぞれの情報がまとめられています。</p>
+<p>これは<code>mosaicsend</code>コマンドに使用されます。</p>
+<h2 id="_7">モザイクの配布</h2>
 <p>集計結果<code>tmp/applicants.json</code>の内容である<code>candidates</code>のアドレスへ割り当てられたモザイク数を送信します。</p>
 <p><code>_sendmosaic.bat</code>をダブルクリックしてください。</p>
+<p><code>tmp/applicants.json</code>の<code>"candidates"</code>に記されたアドレスに割り当てられたモザイクを送信します。</p>
+<p>送信時にも未承認、承認済みトランザクションの確認も行うため二重に実行しても重複してモザイクを送信しません。</p>
               
             </div>
           </div>
