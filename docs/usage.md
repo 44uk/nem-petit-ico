@@ -29,6 +29,9 @@ MOSAICSALE_SINK=__PUT_XEM_RECEIVE_ADDRESS__
 # 配布するモザイクをを保有する秘密鍵を指定します。
 MOSAICSALE_PKEY=__PUT_PRIVATE_KEY_MOSAIC_OWNED__
 
+# マルチシグアドレスの公開鍵を指定します。(モザイクの配布元をマルチシグにする場合)
+MOSAICSALE_MSIG_PUB=__PUT_MULTISIG_PUBLIC_KEY__
+
 # 送信するモザイクを指定します。(e.g. nem:xem)
 MOSAICSALE_MOSAIC_FQN=__PUT_MOSAIC_FULL_NAME__
 
