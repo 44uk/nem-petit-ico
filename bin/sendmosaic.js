@@ -7,6 +7,7 @@ const logger = helper.logger('bin/sendmosaics');
 const DRYRUN = process.env.MOSAICSALE_DRYRUN || 1;
 const PKEY = process.env.MOSAICSALE_PKEY;
 const SENDER = helper.privkey2addr(PKEY);
+const MSIG_PUB = process.env.MOSAICSALE_MSIG_PUB;
 const MOSAIC_FQN = process.env.MOSAICSALE_MOSAIC_FQN;
 
 const MIN_TIME = Date.parse(process.env.MOSAICSALE_MIN_TIME);
@@ -19,6 +20,7 @@ const MESSAGE = process.env.MOSAICSALE_MESSAGE || '';
 logger.info('# Settings');
 logger.info(`DRYRUN = ${DRYRUN}`);
 logger.info(`SENDER = ${SENDER}`);
+logger.info(`MSIG_PUB = ${MSIG_PUB}`);
 logger.info(`MOSAIC_FQN = ${MOSAIC_FQN}`);
 logger.info(`MIN_TIME = ${process.env.MOSAICSALE_MIN_TIME}`);
 logger.info(`MAX_TIME = ${process.env.MOSAICSALE_MAX_TIME}`);
@@ -64,8 +66,8 @@ function main() {
     }
     return candidates;
   })
-  .then(applicant.sendMosaics(MOSAIC_FQN, MESSAGE, PKEY))
-  .then(res=> {
+  .then(applicant.sendMosaics(MOSAIC_FQN, MESSAGE, PKEY, MSIG_PUB))
+  .then(res => {
     logger.info(res);
     console.log(res);
   })
