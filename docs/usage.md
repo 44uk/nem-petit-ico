@@ -58,9 +58,9 @@ npm run applicants
 * `receives`: xemを受け取ったアドレス
 * `sents`: モザイクを送信したアドレス
 
-それぞれの情報がまとめられています。
+それぞれの情報がこのファイルにまとめられます。
 
-これは`mosaicsend`コマンドに使用されます。
+これは`mosaicsend`コマンド実行時に読み込まれて使用されます。
 
 ## Send Mosaic to candidates
 
@@ -71,3 +71,11 @@ npm run sendmosaic
 `tmp/applicants.json`の`"candidates"`に記されたアドレスに割り当てられたモザイクを送信します。
 
 送信時にも未承認、承認済みトランザクションの確認も行うため二重に実行しても重複してモザイクを送信しません。
+
+### DRYRUN機能
+
+`config/env`の`MOSAICSALE_DRYRUN`の値が`0`以外に設定されている場合、トランザクションを発行しません。
+
+実際に送信する直前に、送信先が想定通りかを確認するための機能です。
+
+`0`を設定した状態で`sendmosaic`を実行すると、実際の送信が行えます。
