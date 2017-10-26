@@ -70,6 +70,12 @@
 
     <li class="toctree-l2"><a href="#send-mosaic-to-candidates">Send Mosaic to candidates</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l3" href="#dryrun">DRYRUN機能</a></li>
+        
+        </ul>
+    
 
     </ul>
 	    </li>
@@ -141,6 +147,9 @@ MOSAICSALE_SINK=__PUT_XEM_RECEIVE_ADDRESS__
 # 配布するモザイクをを保有する秘密鍵を指定します。
 MOSAICSALE_PKEY=__PUT_PRIVATE_KEY_MOSAIC_OWNED__
 
+# マルチシグアドレスの公開鍵を指定します。(モザイクの配布元をマルチシグにする場合)
+MOSAICSALE_MSIG_PUB=__PUT_MULTISIG_PUBLIC_KEY__
+
 # 送信するモザイクを指定します。(e.g. nem:xem)
 MOSAICSALE_MOSAIC_FQN=__PUT_MOSAIC_FULL_NAME__
 
@@ -163,14 +172,18 @@ MOSAICSALE_MESSAGE=
 <li><code>receives</code>: xemを受け取ったアドレス</li>
 <li><code>sents</code>: モザイクを送信したアドレス</li>
 </ul>
-<p>それぞれの情報がまとめられています。</p>
-<p>これは<code>mosaicsend</code>コマンドに使用されます。</p>
+<p>それぞれの情報がこのファイルにまとめられます。</p>
+<p>これは<code>mosaicsend</code>コマンド実行時に読み込まれて使用されます。</p>
 <h2 id="send-mosaic-to-candidates">Send Mosaic to candidates</h2>
 <pre><code class="bash">npm run sendmosaic
 </code></pre>
 
 <p><code>tmp/applicants.json</code>の<code>"candidates"</code>に記されたアドレスに割り当てられたモザイクを送信します。</p>
 <p>送信時にも未承認、承認済みトランザクションの確認も行うため二重に実行しても重複してモザイクを送信しません。</p>
+<h3 id="dryrun">DRYRUN機能</h3>
+<p><code>config/env</code>の<code>MOSAICSALE_DRYRUN</code>の値が<code>0</code>以外に設定されている場合、トランザクションを発行しません。</p>
+<p>実際に送信する直前に、送信先が想定通りかを確認するための機能です。</p>
+<p><code>0</code>を設定した状態で<code>sendmosaic</code>を実行すると、実際の送信が行えます。</p>
               
             </div>
           </div>
