@@ -1,0 +1,19 @@
+html
+  body
+    table
+      each el in candidates
+        tr
+          td= el.address
+          td= el.quantity
+
+    table
+      each el in receives
+        tr
+          td= el.address
+          td= el.amount
+
+    table
+      each el in sents
+        tr
+          td= el.address
+          td= el.quantity
