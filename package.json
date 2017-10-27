@@ -15,6 +15,7 @@
   },
   "scripts": {
     "applicants": "node -r dotenv/config bin/applicants.js dotenv_config_path=config/env",
+    "sendmosaic:preview": "pug lib/sendmosaic.pug -O tmp/applicants.json -o tmp/",
     "sendmosaic": "node -r dotenv/config bin/sendmosaic.js dotenv_config_path=config/env",
     "test": "mocha --recursive"
   },
@@ -23,7 +24,9 @@
     "fs-extra": "^4.0.2",
     "lodash": "^4.17.4",
     "log4js": "^2.3.7",
-    "nem-sdk": "^1.5.1"
+    "nem-sdk": "^1.5.1",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "devDependencies": {
     "chai": "^4.1.2",
