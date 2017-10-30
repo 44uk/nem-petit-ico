@@ -1,44 +1,45 @@
-## Setting
+## Settings
 
-`config/env.sample`をコピーして`config/env`として配置してください。
+Copy `config/env.sample` to `config/env`.
 
-`config/env`をテキストエディタで開き、内容を適宜編集してください。
+Open `config/env` and edit.
 
 ```
-# testnet/mainnet ネットワークを指定します。
+# testnet / mainnet
 NEM_NETWORK=testnet
 
-# 接続するノードを指定します。(空白の場合はnem-sdkのデフォルトが利用されます)
+# Connecting node address (default: nem-sdk default)
 # (e.g. http://62.75.171.41)
 NEM_NODE=
 
-# 接続するノードのポートを指定します。(default: 7890)
+# Connecting node port (default: 7890)
 NEM_PORT=
 
-# 0を設定することで実際の送金が行われます。(安全装置としてのフラグです)
+# if set `0`, announce transaction.
 MOSAICSALE_DRYRUN=1
 
-# 対象とするトランザクションの期間を指定します。
-# ISO8601形式で指定してください。
+# Transaction aggregate period.
+# ISO8601 format (YYYY-MM-DDThh:mm:ssZ, YYYY-MM-DDThh:mm:ss+0900)
 MOSAICSALE_MIN_TIME=2017-10-12T00:00:00+0900
 MOSAICSALE_MAX_TIME=2017-10-12T23:59:59+0900
 
-# xem受信アドレスを指定します。(空白の場合は秘密鍵のアドレスが利用されます)
+# Receiving xem address (if blank, use private key address)
 MOSAICSALE_SINK=__PUT_XEM_RECEIVE_ADDRESS__
 
-# 配布するモザイクをを保有する秘密鍵を指定します。
+# PrivateKey which has mosaic you want to send.
 MOSAICSALE_PKEY=__PUT_PRIVATE_KEY_MOSAIC_OWNED__
 
-# マルチシグアドレスの公開鍵を指定します。(モザイクの配布元をマルチシグにする場合)
+# PublicKey multisig address (if multisig address use)
 MOSAICSALE_MSIG_PUB=__PUT_MULTISIG_PUBLIC_KEY__
 
-# 送信するモザイクを指定します。(e.g. nem:xem)
+# Mosaic full name you want to send
+# (e.g. nem:xem)
 MOSAICSALE_MOSAIC_FQN=__PUT_MOSAIC_FULL_NAME__
 
-# 最低必要xem量を指定します。(1000000 = 1xem)
+# Minimum receive xem amount. (1000000 = 1xem)
 MOSAICSALE_MIN_XEM=1000000
 
-# モザイク送信時のメッセージを指定します。
+# Message when sending mosaic.
 MOSAICSALE_MESSAGE=
 ```
 

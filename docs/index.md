@@ -4,6 +4,10 @@
 
 For personal or small ICO project use.
 
+* No Server needed.
+* No Database needed.
+* Just NodeJS.
+
 *Haven't finished testing on MAINNET yet.*
 
 [Feel free to send me your feedback!](/about#feedback-and-contact)
