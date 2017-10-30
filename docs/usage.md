@@ -51,17 +51,13 @@ xem受取アドレスとは別のアカウント秘密鍵を設定すること�
 npm run applicants
 ```
 
-アドレスごとに受け取ったxemの集計を行い、モザイク送信用の中間ファイルを生成します。
+Summarizeing XEM received for each address, then generating `tmp/applicants.json` for mosaic transferring.
 
-中間ファイルは`tmp/applicants.json`として保存されます。
+* `candidates`: Destination to tranfer mosaic
+* `receives`: Address that sent XEME to SINK ADDRESS
+* `sents`: Address that already sent mosaic.
 
-* `candidates`: モザイクを送信するアドレス
-* `receives`: xemを受け取ったアドレス
-* `sents`: モザイクを送信したアドレス
-
-それぞれの情報がこのファイルにまとめられます。
-
-これは`mosaicsend`コマンド実行時に読み込まれて使用されます。
+The file will be used by `mosaicsend` command.
 
 ## Send Mosaic to candidates
 
@@ -69,11 +65,11 @@ npm run applicants
 npm run sendmosaic
 ```
 
-`tmp/applicants.json`の`"candidates"`に記されたアドレスに割り当てられたモザイクを送信します。
+Sending mosaic to `"candidates"` addresses in `tmp/applicants.json`.
 
-送信時にも未承認、承認済みトランザクションの確認も行うため二重に実行しても重複してモザイクを送信しません。
+To check unconfirmed and confirmed transaction so as not to announce transaction duplicately.
 
-### DRYRUN機能
+### DRYRUN
 
 `config/env`の`MOSAICSALE_DRYRUN`の値が`0`以外に設定されている場合、トランザクションを発行しません。
 
