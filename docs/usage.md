@@ -1,8 +1,6 @@
 ## Settings
 
-Copy `config/env.sample` to `config/env`.
-
-Open `config/env` and edit.
+Copy `config/env.sample` to `config/env` then edit `config/env`.
 
 ```
 # testnet / mainnet
@@ -43,8 +41,6 @@ MOSAICSALE_MIN_XEM=1000000
 MOSAICSALE_MESSAGE=
 ```
 
-xem受取アドレスとは別のアカウント秘密鍵を設定することもできます。
-
 ## Summary applicants
 
 ```bash
@@ -71,8 +67,4 @@ To check unconfirmed and confirmed transaction so as not to announce transaction
 
 ### DRYRUN
 
-`config/env`の`MOSAICSALE_DRYRUN`の値が`0`以外に設定されている場合、トランザクションを発行しません。
-
-実際に送信する直前に、送信先が想定通りかを確認するための機能です。
-
-`0`を設定した状態で`sendmosaic`を実行すると、実際の送信が行えます。
+To announce transactions, set `MOSAICSALE_DRYRUN` to `0`.

@@ -4,17 +4,17 @@
 
 Mosaic sale scripts for personal or small ICO project use.
 
-* No Server needed.
-* No Database needed.
-* Just NodeJS.
-
-*Haven't finished testing on MAINNET yet.*
+* No Server required
+* No Database required
+* Just NodeJS
 
 ## Requirement
 
 * Node.js 6.11.4 or greater
 
 ## Installation
+
+Download or clone source code.
 
 ```bash
 $ npm install
