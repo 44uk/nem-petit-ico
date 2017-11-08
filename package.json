@@ -11,8 +11,8 @@
     "url": "https://github.com/44uk/nem-petit-ico.git"
   },
   "scripts": {
-    "applicants": "node -r dotenv/config bin/applicants.js dotenv_config_path=config/env",
-    "sendmosaic": "node -r dotenv/config bin/sendmosaic.js dotenv_config_path=config/env",
+    "aggregate": "node -r dotenv/config bin/aggregate.js dotenv_config_path=config/env",
+    "distribute": "node -r dotenv/config bin/distribute.js dotenv_config_path=config/env",
     "test": "mocha --recursive"
   },
   "dependencies": {
