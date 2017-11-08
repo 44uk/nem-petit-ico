@@ -41,27 +41,27 @@ MOSAICSALE_MIN_XEM=1000000
 MOSAICSALE_MESSAGE=
 ```
 
-## Summary applicants
+## Received xem Aggregation
 
 ```bash
-npm run applicants
+npm run aggregate
 ```
 
-Summarizeing XEM received for each address, then generating `tmp/applicants.json` for mosaic transferring.
+Agregating received xem for each address, then generating `tmp/applicants.json` for mosaic distributing.
 
 * `candidates`: Destination to tranfer mosaic
 * `receives`: Address that sent XEME to SINK ADDRESS
 * `sents`: Address that already sent mosaic.
 
-The file will be used by `mosaicsend` command.
+The file will be used by `distribute` command.
 
-## Send Mosaic to candidates
+## Distribute mosaic to candidates
 
 ```bash
-npm run sendmosaic
+npm run distribute
 ```
 
-Sending mosaic to `"candidates"` addresses in `tmp/applicants.json`.
+Distributing mosaic to `"candidates"` addresses in `tmp/applicants.json`.
 
 To check unconfirmed and confirmed transaction so as not to announce transaction duplicately.
 
