@@ -1,14 +1,11 @@
 {
   "private": true,
   "name": "nem-petit-ico",
-  "description": "For personal or small ICO project use.",
+  "description": "Mosaic sale scripts for personal or small ICO project use.",
   "license": "MIT",
   "author": "44uk",
   "version": "0.0.1",
-  "engines": {
-    "node": "8.1.4"
-  },
-  "homepage": "https://github.com/44uk/nem-petit-ico",
+  "homepage": "https://44uk.github.io/nem-petit-ico",
   "repository": {
     "type": "git",
     "url": "https://github.com/44uk/nem-petit-ico.git"
