@@ -4,9 +4,11 @@
 
 ## Introduction
 
-For personal or small ICO project use.
+Mosaic sale scripts for personal or small ICO project use.
 
-*Haven't finished testing on MAINNET yet.*
+* No Server required
+* No Database required
+* Just NodeJS
 
 [日本語READMEはこちら](README.ja.md)
 
@@ -14,25 +16,9 @@ For personal or small ICO project use.
 
 * Node.js 6.11.4 or greater
 
-## Usage
+## Document
 
 * [nem Petit ICO](https://44uk.github.io/nem-petit-ico/)
-
-### Setup
-
-```node
-$ npm install
-```
-
-### Setting
-
-Copy `.env.sample` to `.env` and Edit.
-
-### TokenSale
-
-```node
-$ npm run tokensale
-```
 
 ## License
 
