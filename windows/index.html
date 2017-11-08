@@ -218,8 +218,8 @@ MOSAICSALE_MESSAGE=
 <h2 id="_5">実行</h2>
 <h3 id="_6">参加アドレスの集計</h3>
 <p><code>MOSAICSALE_SINK</code>アドレスに送られた<code>xem</code>を集計します。</p>
-<p><img alt="_mosaicsale.bat" src="../img/mo_1.png" /></p>
-<p><code>_mosaicsale.bat</code>をダブルクリックしてください。</p>
+<p><img alt="_aggregate.bat" src="../img/mo_1.png" /></p>
+<p><code>_aggregate.bat</code>をダブルクリックしてください。</p>
 <p>アドレスごとに受け取ったxemの集計を行い、モザイク送信用の中間ファイルを生成します。</p>
 <p>中間ファイルは<code>tmp/applicants.json</code>として保存されます。</p>
 <ul>
@@ -228,16 +228,16 @@ MOSAICSALE_MESSAGE=
 <li><code>sents</code>: モザイクを送信したアドレス</li>
 </ul>
 <p>それぞれの情報がこのファイルにまとめられます。</p>
-<p>これは<code>mosaicsend</code>コマンド実行時に読み込まれて使用されます。</p>
+<p>これは<code>distribute</code>コマンド実行時に読み込まれて使用されます。</p>
 <h2 id="_7">モザイクの配布</h2>
 <p>集計結果<code>tmp/applicants.json</code>の内容である<code>candidates</code>のアドレスへ割り当てられたモザイク数を送信します。</p>
-<p><code>_sendmosaic.bat</code>をダブルクリックしてください。</p>
+<p><code>_distribute.bat</code>をダブルクリックしてください。</p>
 <p><code>tmp/applicants.json</code>の<code>"candidates"</code>に記されたアドレスに割り当てられたモザイクを送信します。</p>
 <p>送信時にも未承認、承認済みトランザクションの確認も行うため二重に実行しても重複してモザイクを送信しません。</p>
 <h3 id="dryrun">DRYRUN機能</h3>
 <p><code>config/env</code>の<code>MOSAICSALE_DRYRUN</code>の値が<code>0</code>以外に設定されている場合、トランザクションを発行しません。</p>
 <p>実際に送信する直前に、送信先が想定通りかを確認するための機能です。</p>
-<p><code>0</code>を設定した状態で<code>sendmosaic</code>を実行すると、実際の送信が行えます。</p>
+<p><code>0</code>を設定した状態で<code>distribute</code>を実行すると、実際の送信が行えます。</p>
               
             </div>
           </div>

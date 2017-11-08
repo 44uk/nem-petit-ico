@@ -65,10 +65,10 @@
     <li class="toctree-l2"><a href="#settings">Settings</a></li>
     
 
-    <li class="toctree-l2"><a href="#summary-applicants">Summary applicants</a></li>
+    <li class="toctree-l2"><a href="#received-xem-aggregation">Received xem Aggregation</a></li>
     
 
-    <li class="toctree-l2"><a href="#send-mosaic-to-candidates">Send Mosaic to candidates</a></li>
+    <li class="toctree-l2"><a href="#distribute-mosaic-to-candidates">Distribute mosaic to candidates</a></li>
     
         <ul>
         
@@ -160,22 +160,22 @@ MOSAICSALE_MIN_XEM=1000000
 MOSAICSALE_MESSAGE=
 </code></pre>
 
-<h2 id="summary-applicants">Summary applicants</h2>
-<pre><code class="bash">npm run applicants
+<h2 id="received-xem-aggregation">Received xem Aggregation</h2>
+<pre><code class="bash">npm run aggregate
 </code></pre>
 
-<p>Summarizeing XEM received for each address, then generating <code>tmp/applicants.json</code> for mosaic transferring.</p>
+<p>Agregating received xem for each address, then generating <code>tmp/applicants.json</code> for mosaic distributing.</p>
 <ul>
 <li><code>candidates</code>: Destination to tranfer mosaic</li>
 <li><code>receives</code>: Address that sent XEME to SINK ADDRESS</li>
 <li><code>sents</code>: Address that already sent mosaic.</li>
 </ul>
-<p>The file will be used by <code>mosaicsend</code> command.</p>
-<h2 id="send-mosaic-to-candidates">Send Mosaic to candidates</h2>
-<pre><code class="bash">npm run sendmosaic
+<p>The file will be used by <code>distribute</code> command.</p>
+<h2 id="distribute-mosaic-to-candidates">Distribute mosaic to candidates</h2>
+<pre><code class="bash">npm run distribute
 </code></pre>
 
-<p>Sending mosaic to <code>"candidates"</code> addresses in <code>tmp/applicants.json</code>.</p>
+<p>Distributing mosaic to <code>"candidates"</code> addresses in <code>tmp/applicants.json</code>.</p>
 <p>To check unconfirmed and confirmed transaction so as not to announce transaction duplicately.</p>
 <h3 id="dryrun">DRYRUN</h3>
 <p>To announce transactions, set <code>MOSAICSALE_DRYRUN</code> to <code>0</code>.</p>
