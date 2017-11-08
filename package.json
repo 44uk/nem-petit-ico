@@ -1,34 +1,31 @@
 {
   "private": true,
   "name": "nem-petit-ico",
-  "description": "For personal or small ICO project use.",
+  "description": "Mosaic sale scripts for personal or small ICO project use.",
   "license": "MIT",
   "author": "44uk",
   "version": "0.0.1",
-  "engines": {
-    "node": "8.1.4"
-  },
-  "homepage": "https://github.com/44uk/nem-petit-ico",
+  "homepage": "https://44uk.github.io/nem-petit-ico",
   "repository": {
     "type": "git",
     "url": "https://github.com/44uk/nem-petit-ico.git"
   },
   "scripts": {
-    "applicants": "node -r dotenv/config bin/applicants.js dotenv_config_path=config/env",
-    "sendmosaic": "node -r dotenv/config bin/sendmosaic.js dotenv_config_path=config/env",
+    "aggregate": "node -r dotenv/config bin/aggregate.js dotenv_config_path=config/env",
+    "distribute": "node -r dotenv/config bin/distribute.js dotenv_config_path=config/env",
     "test": "mocha --recursive"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
     "fs-extra": "^4.0.2",
     "lodash": "^4.17.4",
-    "log4js": "^2.3.7",
+    "log4js": "^2.3.11",
     "nem-sdk": "^1.5.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
-    "nock": "^9.0.22",
+    "nock": "^9.0.28",
     "timekeeper": "^2.0.0"
   }
 }

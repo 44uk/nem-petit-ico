@@ -32,6 +32,7 @@ function selectCandidates(applicants, sents) {
     let sentQuantity = sent ? sent.quantity : 0;
 
     // --------
+    // deciding distribution mosaic quantity
     let quantity = (
       a.amount >= MIN_XEM &&
       sentQuantity === 0
