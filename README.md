@@ -16,9 +16,9 @@ Mosaic sale scripts for personal or small ICO project use.
 
 * Node.js 6.11.4 or greater
 
-## Document
+## Documentation
 
-* [nem Petit ICO](https://44uk.github.io/nem-petit-ico/)
+[nem Petit ICO](https://44uk.github.io/nem-petit-ico/)
 
 ## License
 
