@@ -72,7 +72,7 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#dryrun">DRYRUN機能</a></li>
+            <li><a class="toctree-l3" href="#dryrun">DRYRUN</a></li>
         
         </ul>
     
@@ -121,8 +121,7 @@
             <div class="section">
               
                 <h2 id="settings">Settings</h2>
-<p>Copy <code>config/env.sample</code> to <code>config/env</code>.</p>
-<p>Open <code>config/env</code> and edit.</p>
+<p>Copy <code>config/env.sample</code> to <code>config/env</code> then edit <code>config/env</code>.</p>
 <pre><code># testnet / mainnet
 NEM_NETWORK=testnet
 
@@ -161,30 +160,25 @@ MOSAICSALE_MIN_XEM=1000000
 MOSAICSALE_MESSAGE=
 </code></pre>
 
-<p>xem受取アドレスとは別のアカウント秘密鍵を設定することもできます。</p>
 <h2 id="summary-applicants">Summary applicants</h2>
 <pre><code class="bash">npm run applicants
 </code></pre>
 
-<p>アドレスごとに受け取ったxemの集計を行い、モザイク送信用の中間ファイルを生成します。</p>
-<p>中間ファイルは<code>tmp/applicants.json</code>として保存されます。</p>
+<p>Summarizeing XEM received for each address, then generating <code>tmp/applicants.json</code> for mosaic transferring.</p>
 <ul>
-<li><code>candidates</code>: モザイクを送信するアドレス</li>
-<li><code>receives</code>: xemを受け取ったアドレス</li>
-<li><code>sents</code>: モザイクを送信したアドレス</li>
+<li><code>candidates</code>: Destination to tranfer mosaic</li>
+<li><code>receives</code>: Address that sent XEME to SINK ADDRESS</li>
+<li><code>sents</code>: Address that already sent mosaic.</li>
 </ul>
-<p>それぞれの情報がこのファイルにまとめられます。</p>
-<p>これは<code>mosaicsend</code>コマンド実行時に読み込まれて使用されます。</p>
+<p>The file will be used by <code>mosaicsend</code> command.</p>
 <h2 id="send-mosaic-to-candidates">Send Mosaic to candidates</h2>
 <pre><code class="bash">npm run sendmosaic
 </code></pre>
 
-<p><code>tmp/applicants.json</code>の<code>"candidates"</code>に記されたアドレスに割り当てられたモザイクを送信します。</p>
-<p>送信時にも未承認、承認済みトランザクションの確認も行うため二重に実行しても重複してモザイクを送信しません。</p>
-<h3 id="dryrun">DRYRUN機能</h3>
-<p><code>config/env</code>の<code>MOSAICSALE_DRYRUN</code>の値が<code>0</code>以外に設定されている場合、トランザクションを発行しません。</p>
-<p>実際に送信する直前に、送信先が想定通りかを確認するための機能です。</p>
-<p><code>0</code>を設定した状態で<code>sendmosaic</code>を実行すると、実際の送信が行えます。</p>
+<p>Sending mosaic to <code>"candidates"</code> addresses in <code>tmp/applicants.json</code>.</p>
+<p>To check unconfirmed and confirmed transaction so as not to announce transaction duplicately.</p>
+<h3 id="dryrun">DRYRUN</h3>
+<p>To announce transactions, set <code>MOSAICSALE_DRYRUN</code> to <code>0</code>.</p>
               
             </div>
           </div>
