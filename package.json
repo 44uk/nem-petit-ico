@@ -13,6 +13,8 @@
   "scripts": {
     "aggregate": "node -r dotenv/config bin/aggregate.js dotenv_config_path=config/env",
     "distribute": "node -r dotenv/config bin/distribute.js dotenv_config_path=config/env",
+    "exchange": "node -r dotenv/config bin/exchange.js dotenv_config_path=config/env",
+    "sendmessage": "node -r dotenv/config bin/sendmessage.js dotenv_config_path=config/env",
     "test": "mocha --recursive"
   },
   "dependencies": {

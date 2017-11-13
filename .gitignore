@@ -1,4 +1,5 @@
 config/env
+config/messages.txt
 site/
 log/*.log
 tmp/*
