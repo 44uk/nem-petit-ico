@@ -80,13 +80,12 @@ function sendXem(key, amount, asMosaic) {
     );
   }
 
-  new Promise((resolve, _) => {
-    setTimeout(() => { resolve(); }, 10000);
-  })
-  .then(() => {
+  return (new Promise((resolve, _) => {
+    setTimeout(() => { resolve('do'); }, randNum(60, 300) * 1000);
+  }))
+  .then((_) => {
     return nem.model.transactions.send(common, txEntity, endpoints.pick());
   })
-
   // return nem.model.transactions.send(common, txEntity, endpoints.pick());
 }
 

@@ -64,13 +64,7 @@ function sendXem(addr, amount) {
     nem.model.network.data.testnet.id
   );
 
-  return (new Promise((resolve, _) => {
-    setTimeout(() => { resolve('do'); }, randNum(1, 6) * 10000);
-  }))
-  .then((str) => {
-    return nem.model.transactions.send(common, txEntity, endpoints.pick());
-  })
-  // return nem.model.transactions.send(common, txEntity, endpoints.pick());
+  return nem.model.transactions.send(common, txEntity, endpoints.pick());
 }
 
 send(addrs);
