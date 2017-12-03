@@ -33,12 +33,12 @@ function selectCandidates(applicants, sents) {
 
     // --------
     // deciding distribution mosaic quantity
-    let quantity = (a.amount / 1000000) - sentQuantity
+    // let quantity = (a.amount / 1000000) - sentQuantity
 
-    // let quantity = (
-    //   a.amount >= MIN_XEM &&
-    //   sentQuantity === 0
-    // ) ?  1 : 0;
+    let quantity = (
+      a.amount >= MIN_XEM &&
+      sentQuantity === 0
+    ) ?  1 : 0;
     // --------
 
     return {address: a.address, quantity: quantity}
